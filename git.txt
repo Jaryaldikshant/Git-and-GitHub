@@ -1,1 +1,57 @@
+Version Control System: Also known as source control
+
+The system used for tracking and managing the software code changes is called VERSION CONTROL
+
+Famous Version control Systems: 1. Git
+                                2. Apache Sub Version
+                                3. Piper (used by Google)
+
+
+
+Now we will use Git:-
+
 Git is a free and open source distributed version control system, designed to handle everything from small to large projects with speed and efficiency
+
+Installation of git: https://git-scm.com/downloads
+
+Git CLI: Git Command Line Interface
+
+SetUp global configuration: 
+
+To set up global user name: git config --global user.name 
+
+To set up global user email: git config --global user.email
+
+
+Version control using git:-
+
+create a new folder of any name and in that folder create a new file
+
+1. Initializing the Git project: git init (it Initialize the empty git repo in the current user directory and .git named hidden folder is created (which contain all the tracking of our project))
+
+2. To see hidden folder in the current director: ls -force 
+
+3. To enable tracking of our project or file: git add <file_name>
+
+4. Adding the files to VCS
+    - git add <file_path>
+    - git add .    (to add all files)
+
+5. Removing the files form VCS
+    - git rm <file_path>
+
+
+Now we have to track changes in the code over the time:-
+
+Introduction to Commit: Whenever we change somthing in the code we commit that 
+
+
+1. To commit something in after the change: git commit -m "Message you have to pass"
+
+2. To see history of the commits: git log
+
+3. 
+
+
+
+
