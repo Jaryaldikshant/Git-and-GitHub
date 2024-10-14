@@ -11,11 +11,8 @@ function isAbove(){
 }
 
 function isbuild(){
-    console.log("Building...");
+    console.log("Building...")
 }
 
-function add(a, num2){
-    return a+num2;
-}
 
 
