@@ -50,8 +50,12 @@ Introduction to Commit: Whenever we change somthing in the code we commit that
 
 2. To see history of the commits: git log
 
-3. 
+3. To see which code had change to which commit: git show
 
+4. It will show the line by line code and changes perform by which author: git blame <file_name>
+
+
+5. It will show us the : git status
 
 
 
