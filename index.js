@@ -10,3 +10,7 @@ function isAbove(){
     return age >=18;
 }
 
+
+function add(a, num2){
+    return a+num2;
+}
