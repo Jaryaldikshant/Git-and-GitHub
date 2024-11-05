@@ -43,6 +43,13 @@ create a new folder of any name and in that folder create a new file
 
 Now we have to track changes in the code over the time:-
 
+By using: (git add file_name) 
+we can track our code in the file 
+A Green line in the left side appears if we add something and 
+A Blue line in the left side appears if we delete something
+
+To check which lines are added we use: git diff
+
 Introduction to Commit: Whenever we change somthing in the code we commit that 
 
 
