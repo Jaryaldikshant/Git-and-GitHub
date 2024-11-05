@@ -78,8 +78,8 @@ if your commit history is good then you will not face any issue in revert backin
 
 Head always pointing out the latest commit to revert back will be change the head position
 
-1. It will reset the head to prevoius position: git reset --hard <commit id to which you want head will point out>
+1. It will reset the head to prevoius position: git reset --hard <commit id to which you want head will point out> it will delete all the commit after the head (Head basically means the latest commit)
 
-2. To revert back the particular code: git revert <commit id>
+2. To revert back the particular code in the file : git revert <commit id>
 
 

@@ -11,18 +11,11 @@ function isAbove(){
 }
 
 function isbuild(){
-    console.log("Building...");
-}
-
-function add(a, num2){
-    return a+num2;
+    console.log("Building...")
 }
 
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> parent of 74c5ff9 (Removing add function)
