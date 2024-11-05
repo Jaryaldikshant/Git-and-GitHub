@@ -71,7 +71,10 @@ Introduction to Commit: Whenever we change somthing in the code we commit that
 5. It will show us the current state of working directory : git status
 
 
-Reverting Back:-
+Reverting Back:- Mechanism used if something went wrong a user can revert it basically (undo) it
+
+
+if your commit history is good then you will not face any issue in revert backing
 
 Head always pointing out the latest commit to revert back will be change the head position
 
