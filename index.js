@@ -14,9 +14,8 @@ function isbuild(){
     console.log("Building...")
 }
 
-function isRemove(){
-    console.log("Removing....");
-}
+
+
 
 
 

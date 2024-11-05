@@ -46,9 +46,15 @@ Now we have to track changes in the code over the time:-
 By using: (git add file_name) 
 we can track our code in the file 
 A Green line in the left side appears if we add something and 
-A Blue line in the left side appears if we delete something
+A Blue line in the left side appears if we delete something or change something
 
-To check which lines are added we use: git diff
+To check which lines are added or remove we use: git diff
+
+
+Adding or Getting Track of each file is very complicated so we use : (git add .) 
+
+it will add all the file and get track of all files
+
 
 Introduction to Commit: Whenever we change somthing in the code we commit that 
 
