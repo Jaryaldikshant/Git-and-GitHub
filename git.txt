@@ -117,8 +117,18 @@ This setup helps everyone stay in sync and work together without conflicts.
 
 
 
-
 Introduction to GitHub:-
 
+Login/Sign up to GitHub, make a repository, copy the Link of your repository
 
+To add a remote which basically named as origin use: git remote add orgin <Link of your repo>
+
+Now we will push all the change in the orgin server in the main branch: git push -u origin main
+
+SSH Secure Shell used for Authentication
+
+
+
+
+Branching in GitHub:- 
 
