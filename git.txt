@@ -7,7 +7,6 @@ Famous Version control Systems: 1. Git
                                 3. Piper (used by Google)
 
 
-
 Now we will use Git:-
 
 Git is a free and open source distributed version control system, designed to handle everything from small to large projects with speed and efficiency
@@ -21,6 +20,8 @@ SetUp global configuration:
 To set up global user name: git config --global user.name 
 
 To set up global user email: git config --global user.email
+
+
 
 
 Version control using git:-
@@ -41,7 +42,7 @@ create a new folder of any name and in that folder create a new file
     - git rm <file_path>
 
 
-Now we have to track changes in the code over the time:-
+Now we have to track changes in the code over the time:
 
 By using: (git add file_name) 
 we can track our code in the file 
@@ -56,8 +57,8 @@ Adding or Getting Track of each file is very complicated so we use : (git add .)
 it will add all the file and get track of all files
 
 
-Introduction to Commit: Whenever we change somthing in the code we commit that 
 
+Introduction to Commit:- Whenever we change somthing in the code we commit that 
 
 1. To commit something in after the change: git commit -m "Message you have to pass"
 
@@ -71,8 +72,8 @@ Introduction to Commit: Whenever we change somthing in the code we commit that
 5. It will show us the current state of working directory : git status
 
 
-Reverting Back:- Mechanism used if something went wrong a user can revert it basically (undo) it
 
+Reverting Back:- Mechanism used if something went wrong a user can revert it basically (undo) it
 
 if your commit history is good then you will not face any issue in revert backing
 
@@ -81,5 +82,43 @@ Head always pointing out the latest commit to revert back will be change the hea
 1. It will reset the head to prevoius position: git reset --hard <commit id to which you want head will point out> it will delete all the commit after the head (Head basically means the latest commit)
 
 2. To revert back the particular code in the file : git revert <commit id>
+
+
+
+Git Collaboration:-
+
+Let's say we’re working on a project on our local computers, and we want to use Git as our Version Control System (VCS) to manage changes to our code.
+
+We also want to collaborate on this project with a friend.
+
+To make sure both our code versions are the same and stay updated, we use something called a Single Source of Truth. This is basically a Remote Server where we keep the main copy of our code.
+
+Here’s how it works:
+
+    1. We each make changes to the code on our own computers.
+    2. When we're ready, we push these changes to the central server (remote server) where Git is also running.
+    3. This remote server keeps the latest version of the code, making sure everyone has the same copy.
+
+Now, whenever we make new changes, we push those updates to the remote server. Any other team members can then pull these changes from the remote, so everyone has the latest version of the project.
+Git Servers
+
+GitHub is an example of a Git server, and it's available publicly for everyone to use.
+
+Just like GitHub, there are other Git servers like GitLab and Bitbucket that provide similar services.
+
+So, in short:
+
+    We use Git on our local computers to track changes.
+    We use a remote server (like GitHub) to keep a central version of our code.
+    All our changes are pushed to this central server, and our teammates can pull these changes to have the same code.
+
+This setup helps everyone stay in sync and work together without conflicts.
+
+
+
+
+
+Introduction to GitHub:-
+
 
 
