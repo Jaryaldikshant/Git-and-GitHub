@@ -1,168 +1,209 @@
-Version Control System: Also known as source control
+## **Version Control System (VCS)**
 
-The system used for tracking and managing the software code changes is called VERSION CONTROL
+### **Definition:**
+- Also known as **source control**
+- Tracks and manages software code changes over time.
 
-Famous Version control Systems: 1. Git
-                                2. Apache Sub Version
-                                3. Piper (used by Google)
+### **Famous VCS Examples:**
+1. **Git**
+2. **Apache Subversion**
+3. **Piper** (used by Google)
 
+---
 
-Now we will use Git:-
+## **Using Git**
 
-Git is a free and open source distributed version control system, designed to handle everything from small to large projects with speed and efficiency
+- **Git** is a free and open-source distributed VCS, efficient for managing projects of any size.
 
-Installation of git: https://git-scm.com/downloads
+### **Installation:**
+- Download Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-Git CLI: Git Command Line Interface
+### **Git CLI (Command Line Interface)**
 
-SetUp global configuration: 
+#### **Global Configuration:**
+1. Set global username: `git config --global user.name`
+2. Set global email: `git config --global user.email`
 
-To set up global user name: git config --global user.name 
+---
 
-To set up global user email: git config --global user.email
+## **Version Control using Git**
 
+### **Creating a Git Project:**
+1. **Initialize Git:**  
+   - `git init`  
+   - Initializes an empty Git repo in the current directory and creates a hidden `.git` folder containing project tracking data.
 
+2. **View Hidden Folders:**  
+   - `ls -force`  
+   - Shows hidden folders/files in the current directory.
 
+### **Tracking Project Files:**
 
-Version control using git:-
+1. **Add Files to Git:**  
+   - Track specific files: `git add <file_name>`
+   - Track files by path: `git add <file_path>`
+   - Track all files: `git add .`
 
-create a new folder of any name and in that folder create a new file
+2. **Remove Files from Git:**  
+   - `git rm <file_path>`
 
-1. Initializing the Git project: git init (it Initialize the empty git repo in the current user directory and .git named hidden folder is created (which contain all the tracking of our project))
+### **Tracking Code Changes Over Time**
 
-2. To see hidden folder in the current director: ls -force 
+- **Adding Files to Track Changes:**  
+  - Use `git add <file_name>` for tracking updates.
 
-3. To enable tracking of our project or file: git add <file_name>
+- **Identifying Code Changes:**  
+  - Green line: indicates added code.
+  - Blue line: shows deleted or modified code.
 
-4. Adding the files to VCS
-    - git add <file_path>
-    - git add .    (to add all files)
+3. **Check Changes:**  
+   - View line-by-line changes: `git diff`
 
-5. Removing the files form VCS
-    - git rm <file_path>
+4. **Add All Changes:**  
+   - `git add .`  
+   - Adds all files at once, simplifying the tracking process.
 
+---
 
-Now we have to track changes in the code over the time:
+## **Introduction to Commit**
 
-By using: (git add file_name) 
-we can track our code in the file 
-A Green line in the left side appears if we add something and 
-A Blue line in the left side appears if we delete something or change something
+- **Commit**: Saves code changes as a snapshot in Git.
 
-To check which lines are added or remove we use: git diff
+### **Commit Commands:**
+1. **Make a Commit:**  
+   - `git commit -m "Message describing changes"`
 
+2. **View Commit History:**  
+   - `git log`
 
-Adding or Getting Track of each file is very complicated so we use : (git add .) 
+3. **View Code Changes in a Commit:**  
+   - `git show`
 
-it will add all the file and get track of all files
+4. **See Changes Made by Each Author:**  
+   - `git blame <file_name>`
 
+5. **Check Current State:**  
+   - `git status`
 
+---
 
-Introduction to Commit:- Whenever we change somthing in the code we commit that 
+## **Reverting Changes (Undoing Mistakes)**
 
-1. To commit something in after the change: git commit -m "Message you have to pass"
+- **Reverting** allows undoing mistakes.
+- **Head**: Points to the latest commit.
 
-2. To see history of the commits: git log
+### **Reset and Revert Commands:**
+1. **Reset Head to Previous Commit:**  
+   - `git reset --hard <commit_id>`  
+   - Deletes commits after the specified commit.
 
-3. To see which code had change to which commit: git show
+2. **Revert Specific Changes in a File:**  
+   - `git revert <commit_id>`
 
-4. It will show the line by line code and changes perform by which author: git blame <file_name>
+---
 
+## **Git Collaboration**
 
-5. It will show us the current state of working directory : git status
+- **Scenario**: Working on a project with teammates using Git as the VCS.
+  
+### **Using a Single Source of Truth:**
+- A **Remote Server** is used to store the main project copy.
+- Process:
+  1. Each collaborator makes changes on their local machine.
+  2. Changes are pushed to the remote server.
+  3. The remote server ensures all collaborators have the latest code copy.
 
+### **Git Servers:**
+- **GitHub** (publicly available)
+- **Other Git servers:** GitLab, Bitbucket
 
+#### **Summary:**
+1. Use Git locally to track changes.
+2. Use a remote server (e.g., GitHub) for the central code version.
+3. Push changes to the remote server, and teammates pull them to sync.
 
-Reverting Back:- Mechanism used if something went wrong a user can revert it basically (undo) it
+---
 
-if your commit history is good then you will not face any issue in revert backing
+## **Introduction to GitHub**
 
-Head always pointing out the latest commit to revert back will be change the head position
+### **Getting Started:**
+1. **Sign Up** on GitHub.
+2. **Create a Repository** and copy its URL.
 
-1. It will reset the head to prevoius position: git reset --hard <commit id to which you want head will point out> it will delete all the commit after the head (Head basically means the latest commit)
+### **Adding a Remote:**
+- Link your local repo to the GitHub repo (name it "origin"):  
+  - `git remote add origin <repo_URL>`
 
-2. To revert back the particular code in the file : git revert <commit id>
+### **Push Changes to Main Branch:**
+- `git push -u origin main`
 
+### **SSH (Secure Shell):**  
+- A secure protocol used for authentication when interacting with GitHub.
 
+---
 
-Git Collaboration:-
+## **Branching in Git**
 
-Let's say we’re working on a project on our local computers, and we want to use Git as our Version Control System (VCS) to manage changes to our code.
+### **Why Use Branching?**
+- Branches allow separate work areas in the project to avoid cluttering the main branch with every collaborator’s changes.
+- Example: Use a **main branch** for the stable version of the code.
 
-We also want to collaborate on this project with a friend.
+### **How Branches Work:**
+- **Collaborators create new branches** from the latest commit (Head).
+- Changes are pushed to the new branch.
+- Once complete, changes are **merged** into the main branch, creating a single, summarized commit.
 
-To make sure both our code versions are the same and stay updated, we use something called a Single Source of Truth. This is basically a Remote Server where we keep the main copy of our code.
+### **Branch Commands:**
+1. **Create a New Branch:**  
+   - `git branch <branch_name>`
 
-Here’s how it works:
+2. **Switch Between Branches:**  
+   - `git checkout <branch_name>`
 
-    1. We each make changes to the code on our own computers.
-    2. When we're ready, we push these changes to the central server (remote server) where Git is also running.
-    3. This remote server keeps the latest version of the code, making sure everyone has the same copy.
+3. **Push a Branch to Remote:**  
+   - `git push --set-upstream origin <branch_name>`
 
-Now, whenever we make new changes, we push those updates to the remote server. Any other team members can then pull these changes from the remote, so everyone has the latest version of the project.
-Git Servers
+---
 
-GitHub is an example of a Git server, and it's available publicly for everyone to use.
+## **Merging Branches**
 
-Just like GitHub, there are other Git servers like GitLab and Bitbucket that provide similar services.
+- **Merging** integrates changes from one branch into another, typically from a feature branch into the main branch after work is completed.
 
-So, in short:
+### **Steps to Merge:**
+1. Switch to the branch you want to merge changes **into** (e.g., main):  
+   - `git checkout main`
 
-    We use Git on our local computers to track changes.
-    We use a remote server (like GitHub) to keep a central version of our code.
-    All our changes are pushed to this central server, and our teammates can pull these changes to have the same code.
+2. **Merge the Feature Branch:**  
+   - `git merge <branch_name>`
 
-This setup helps everyone stay in sync and work together without conflicts.
+3. **Push Merged Changes to Remote:**  
+   - `git push origin main`
 
+#### **Merge Conflicts:**
+- Occur when changes in two branches affect the same part of a file.
+- Resolve conflicts manually, then commit the resolved changes:
+  - `git add <conflicted_file>`
+  - `git commit -m "Resolved merge conflict"`
 
+---
 
+## **Stashing Changes**
 
-Introduction to GitHub:-
+- **Stashing** temporarily saves uncommitted changes without committing them, allowing you to switch branches without losing progress.
 
-Login/Sign up to GitHub, make a repository, copy the Link of your repository
+### **Commands for Stashing:**
+1. **Stash Changes:**  
+   - `git stash`
 
-To add a remote which basically named as origin use: git remote add orgin <Link of your repo>
+2. **View Stash List:**  
+   - `git stash list`
 
-Now we will push all the change in the orgin server in the main branch: git push -u origin main
+3. **Apply Stash (Retrieve Changes):**  
+   - `git stash apply`
 
-SSH Secure Shell used for Authentication
+4. **Remove Stash after Applying:**  
+   - `git stash drop`
 
+---
 
-
-
-Branching in GitHub:- 
-
-Basically a track which contains all the commit 
-
-Imagine a branch named as main branch if we are working in the group all the collaborators also commit in that main branch and over the time commit will pollute in that main branch and let say we want to revert back other collaborators commits , so it will be very difficult to track and revert back
-
-to tackle this problem we use different Branching in git
-
-means other collaborators will make a new branch starting form the Head (a latest commit) and they will push in that new branch and after the work will complete the owner will merge that branch into main branch
-
-and git will make a big commit containing all commit provided by the collaborators and merge it into main branch
-
-
-to make a new branch we use: git branch <branchname>
-
-to switch form 1 branch to other we use: git checkout <branchname>
-
-Basically a track which contains all the commit 
-
-Imagine a branch named as main branch if we are working in the group all the collaborators also commit in that main branch and over the time commit will pollute in that main branch and let say we want to revert back other collaborators commits , so it will be very difficult to track and revert back
-
-to tackle this problem we use different Branching in git
-
-means other collaborators will make a new branch starting form the Head (a latest commit) and they will push in that new branch and after the work will complete the owner will merge that branch into main branch
-
-and git will make a big commit containing all commit provided by the collaborators and merge it into main branch
-
-
-to make a new branch we use: git branch <branchname>
-
-to switch form 1 branch to other we use: git checkout <branchname>
-
-
-this will make this branch in the remote and push the code into it:  git push --set -upstream origin <branchname>
-
-to merge branches: git merge orgin/<branchname>
+This outline provides a step-by-step guide on **version control** and **collaboration in Git** with a focus on **branching**, **merging**, and **stashing**, highlighting the essential commands and processes for managing a Git repository effectively.
