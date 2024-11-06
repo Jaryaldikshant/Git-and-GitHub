@@ -163,8 +163,47 @@
 3. **Push a Branch to Remote:**  
    - `git push --set-upstream origin <branch_name>`
 
-4. **Merge Branches:**  
-   - `git merge origin/<branch_name>`
+---
+
+## **Merging Branches**
+
+- **Merging** integrates changes from one branch into another, typically from a feature branch into the main branch after work is completed.
+
+### **Steps to Merge:**
+1. Switch to the branch you want to merge changes **into** (e.g., main):  
+   - `git checkout main`
+
+2. **Merge the Feature Branch:**  
+   - `git merge <branch_name>`
+
+3. **Push Merged Changes to Remote:**  
+   - `git push origin main`
+
+#### **Merge Conflicts:**
+- Occur when changes in two branches affect the same part of a file.
+- Resolve conflicts manually, then commit the resolved changes:
+  - `git add <conflicted_file>`
+  - `git commit -m "Resolved merge conflict"`
 
 ---
 
+## **Stashing Changes**
+
+- **Stashing** temporarily saves uncommitted changes without committing them, allowing you to switch branches without losing progress.
+
+### **Commands for Stashing:**
+1. **Stash Changes:**  
+   - `git stash`
+
+2. **View Stash List:**  
+   - `git stash list`
+
+3. **Apply Stash (Retrieve Changes):**  
+   - `git stash apply`
+
+4. **Remove Stash after Applying:**  
+   - `git stash drop`
+
+---
+
+This outline provides a step-by-step guide on **version control** and **collaboration in Git** with a focus on **branching**, **merging**, and **stashing**, highlighting the essential commands and processes for managing a Git repository effectively.
