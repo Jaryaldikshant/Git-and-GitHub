@@ -147,4 +147,22 @@ to make a new branch we use: git branch <branchname>
 
 to switch form 1 branch to other we use: git checkout <branchname>
 
+Basically a track which contains all the commit 
+
+Imagine a branch named as main branch if we are working in the group all the collaborators also commit in that main branch and over the time commit will pollute in that main branch and let say we want to revert back other collaborators commits , so it will be very difficult to track and revert back
+
+to tackle this problem we use different Branching in git
+
+means other collaborators will make a new branch starting form the Head (a latest commit) and they will push in that new branch and after the work will complete the owner will merge that branch into main branch
+
+and git will make a big commit containing all commit provided by the collaborators and merge it into main branch
+
+
+to make a new branch we use: git branch <branchname>
+
+to switch form 1 branch to other we use: git checkout <branchname>
+
+
 this will make this branch in the remote and push the ocde into it:  git push --set -upstream origin <branchname>
+
+to merge branches: git merge orgin/<branchname>
