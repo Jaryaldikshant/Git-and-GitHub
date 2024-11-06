@@ -6,9 +6,6 @@ function remove(a, num2){
     return 0;
 }
 
-
-function newFeatureAdd() {
-    console.log("This is a new feature");
-    console.log("This is a new feature A");
-
-  }
+function newFeatureB() {
+    console.log("This is a new Feature B");
+}
