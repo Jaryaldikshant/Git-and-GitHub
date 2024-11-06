@@ -163,6 +163,6 @@ to make a new branch we use: git branch <branchname>
 to switch form 1 branch to other we use: git checkout <branchname>
 
 
-this will make this branch in the remote and push the ocde into it:  git push --set -upstream origin <branchname>
+this will make this branch in the remote and push the code into it:  git push --set -upstream origin <branchname>
 
 to merge branches: git merge orgin/<branchname>
